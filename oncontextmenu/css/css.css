@@ -1,0 +1,4 @@
+.rc{background: #fff;border-radius: 5px;border:2px solid #eee;width: 200px;position: absolute;left: 0;top: 0;z-index: 20;display: none;padding: 15px;}
+.rc ul li{height: 24px;list-style: none;}
+.rc ul li:hover{height: 24px;background: #eee;}
+ul,li{margin: 0;padding: 0;}
