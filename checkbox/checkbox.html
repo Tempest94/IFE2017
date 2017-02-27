@@ -7,14 +7,16 @@
 			input{display: none;}
 			.check{background: url('checkbox.png') no-repeat;padding-left: 20px;background-position: -21px -28px ;}
 			#check:checked ~ .check{background-position: -57px -28px ;}
-			.radio,.radio2{background: url('checkbox.png') no-repeat;padding-left: 20px;background-position: -21px -7px ;}
+			.radio{background: url('checkbox.png') no-repeat;padding-left: 20px;background-position: -21px -7px ;}
 			#radio:checked ~ .radio{background-position: -57px -7px ;}
-			#radio2:checked ~ .radio2{background-position: -57px -7px ;}
 			
 			.p_check{width: 12px;height: 12px;position: absolute;border: 1px solid #ddd;left: 12px;}
 			#p_check:checked ~ .p_check{border: 1px solid #ff0000;}
 			#p_check:checked ~ .p_check:after{content: '';width: 4px;height: 2px;transform: rotate(45deg);-webkit-transform: rotate(45deg);background: red;position: absolute;top: 5px;left: 2px;}
 			#p_check:checked ~ .p_check:before{content: '';width: 7px;height: 2px;transform: rotate(-45deg);-webkit-transform: rotate(-45deg);background: red;position: absolute;top: 5px;left: 4px;}
+		    .p_radio{width: 14px;height: 14px;position: absolute;border: 1px solid #ddd;left: 31px;border-radius: 12px;}
+			#p_radio:checked ~ .p_radio{border: 1px solid #ff0000;}
+			#p_radio:checked ~ .p_radio:before{content: '';width: 6px;height: 6px;background: red;position: absolute;top: 4px;left: 4px;border-radius: 12px;}
 		</style>
 	</head>
 	<body>
@@ -24,8 +26,6 @@
 			
 			<input type="radio" name="radio" id="radio" value="1"/>
 			<label for="radio" class="radio"></label>
-			<input type="radio" name="radio" id="radio2" value="1"/>
-			<label for="radio2" class="radio2"></label>
 		</div>
 		
 		<div class="pseudo">
@@ -34,8 +34,6 @@
 			
 			<input type="radio" name="radio" id="p_radio" value="1"/>
 			<label for="p_radio" class="p_radio"></label>
-			<input type="radio" name="radio" id="p_radio2" value="1"/>
-			<label for="p_radio2" class="p_radio2"></label>
 		</div>
 	</body>
 </html>
