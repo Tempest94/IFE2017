@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{width: 600px;margin:200px auto ;height: 400px;}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			手机验证:<input type="text" name="phone" id="phone" value="" /><input type="button" name="button" value="验证" onclick="yz('phone')"/><br/><br/>
+			重复单词验证:<input type="text" name="phone" id="num" value="" /><input type="button" name="button" value="验证" onclick="yz1('num')"/>
+		</div>
+	</body>
+	<script type="text/javascript">
+	function yz(a){
+		var phone=document.getElementById(a).value;
+		var a=/^1[34578]\d{9}$/.test(phone);
+		alert(a);
+	}
+	function yz1(a){
+		var phone=document.getElementById(a).value;
+		var a=/(?:^|\s)\b([A-Za-z]+)\s+\1\b(?=\s|$)/.test(phone);
+		alert(a);
+	}
+	</script>
+</html>
