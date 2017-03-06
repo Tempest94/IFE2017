@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{width: 600px;height: 338px;margin: 200px auto;position: relative;}
+			.box img{width: 600px;height: 338px;}
+			.box:hover img{-webkit-filter: blur(3px); filter: blur(3px);transition: all .8s;}
+			.box h3{transition: all .8s;opacity:0;font-size: 48px;position: absolute;top: 28%;left: 20%;text-align: center;background-image: -webkit-linear-gradient(left, #43cea2, #195c9c 25%, #43cea2 50%, #195c9c 75%, #43cea2 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-size: 200% 100%;animation: streamer 5s infinite linear;}
+		    @keyframes streamer {0%{background-position: 0 0;}100% {background-position: -100% 0;}}
+		    .box::after{
+		    	  content: '';
+				  position: absolute;
+				  left: 50%;
+				  top: 10%;
+				  width: 0;
+				  height: 80%;
+				  border: 3px solid ghostwhite;
+				  border-width: 3px 0;
+				  transition: all .8s;
+				  box-sizing: border-box;
+				  z-index: 200;
+		    }
+		    .box::before{
+		    	  content: '';
+				  position: absolute;
+				  left: 10%;
+				  top: 50%;
+				  width: 80%;
+				  height: 0;
+				  border: 3px solid ghostwhite;
+				  border-width: 0 3px;
+				  transition: all .8s;
+				  box-sizing: border-box;
+				  z-index: 200;
+		    }
+			.box:hover::before {
+			  height: 80%;
+			  top: 10%;
+			}
+			
+			.box:hover::after {
+			  width: 80%;
+			  left: 10%;
+			}
+			.box:hover h3{opacity: 1;}
+		</style>
+	</head>
+    <body>
+         <div class="box">
+         	<img src="img.jpg"/>
+         	<h3>CSS3 Gradient</h3>
+         </div>
+	</body>
+</html>
