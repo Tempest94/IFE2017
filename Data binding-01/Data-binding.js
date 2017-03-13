@@ -12,7 +12,7 @@ var p = Observer.prototype;
 p.walk = function (obj) {
     var val;
     for (var key in obj) {
-        // 这里为什么要用hasOwnProperty进行过滤呢？
+    // 这里为什么要用hasOwnProperty进行过滤呢？
     // 因为for...in 循环会把对象原型链上的所有可枚举属性都循环出来
     // 而我们想要的仅仅是这个对象本身拥有的属性，所以要这么做。
     if (obj.hasOwnProperty(key)) {
