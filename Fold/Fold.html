@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+          *{margin: 0;padding: 0;}
+          .box{width: 300px;height: auto;margin: 300px auto;}
+          .box label{padding:5px 0;display:block;font: 18px/32px Arial, sans-serif;border:1px solid #e1e1e1;border-radius: 10px;padding-left: 10px;background: #f2f2f2;}
+          .box label:hover{text-decoration: underline;cursor: pointer;}
+          .p{word-wrap: break-word;background: #fff;display: none;border-radius: 10px;border: 1px solid #e1e1e1;border-top: 0px;height: auto;padding:5%;}
+          .tab{margin-bottom:5px;}
+          input{display: none;}
+          input:checked ~ .p{display: block;border-radius: 0 0 10px 10px;}
+          input:checked ~ label{border-radius:10px 10px 0 0;}
+        </style>
+    </head>
+    <body>
+    	<div class="box">
+    		<div class="tab">
+    			<input type="radio" name="f" id="f1" value="f" />
+    			<label for="f1">标题一</label>
+    			<p class="p">...............................................................................................................</p>
+    		</div>
+    		<div class="tab">
+    			<input type="radio" name="f" id="f2" value="f" />
+    			<label for="f2">标题二</label>
+    			<p class="p">...............................................................................................................</p>
+    		</div>
+    		<div class="tab">
+    			<input type="radio" name="f" id="f3" value="f" />
+    			<label for="f3">标题三</label>
+    			<p class="p">...............................................................................................................</p>
+    		</div>
+    	</div>
+    </body>
+</html>
