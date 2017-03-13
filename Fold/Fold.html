@@ -8,10 +8,10 @@
           .box{width: 300px;height: auto;margin: 300px auto;}
           .box label{padding:5px 0;display:block;font: 18px/32px Arial, sans-serif;border:1px solid #e1e1e1;border-radius: 10px;padding-left: 10px;background: #f2f2f2;}
           .box label:hover{text-decoration: underline;cursor: pointer;}
-          .p{word-wrap: break-word;background: #fff;display: none;border-radius: 10px;border: 1px solid #e1e1e1;border-top: 0px;height: auto;padding:5%;}
+          .p{word-wrap: break-word;background: #fff;height: 0;transition: all .3s;overflow: hidden;border-color: #e1e1e1;padding: 0 5%;}
           .tab{margin-bottom:5px;}
           input{display: none;}
-          input:checked ~ .p{display: block;border-radius: 0 0 10px 10px;}
+          input:checked ~ .p{border-radius: 0 0 10px 10px;height: auto;border: 1px solid #e1e1e1;border-top: 0px;padding:5%;}
           input:checked ~ label{border-radius:10px 10px 0 0;}
         </style>
     </head>
