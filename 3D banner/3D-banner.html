@@ -3,7 +3,131 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<style type="text/css">
+			*,
+			*::after,
+			*::before {
+				box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				-o-box-sizing: border-box;
+				-ms-box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+			body{width: 100%;height: 100vh;}
+			.stage{width: 100%;height: 100%;perspective: 800px;position: relative;}
+			.container {
+				width: 400px;
+				height: 250px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-top: -125px;
+				margin-left: -200px;
+				transform-style: preserve-3d;
+				transform: rotateY(0deg);
+				transition: transform .5s ease;
+			}
+			.container img {
+				position: absolute;
+				width: 400px;
+				height: 250px;
+				padding: 30px;
+			}
+			img:nth-child(1) {
+				transform: rotateY(0deg) translateZ(370px);
+			}
+			
+			img:nth-child(2) {
+				transform: rotateY(60deg) translateZ(370px);
+			}
+			
+			img:nth-child(3) {
+				transform: rotateY(120deg) translateZ(370px);
+			}
+			
+			img:nth-child(4) {
+				transform: rotateY(180deg) translateZ(370px);
+			}
+			
+			img:nth-child(5) {
+				transform: rotateY(240deg) translateZ(370px);
+			}
+			
+			img:nth-child(6) {
+				transform: rotateY(300deg) translateZ(370px);
+			}
+            #left {
+				position: absolute;
+				left: 10%;
+				top: 50%;
+				width: 0;
+				height: 0;
+				margin-top: -30px;
+				border-left: 30px solid transparent;
+				border-right: 30px solid #aaa;
+				border-top: 60px solid transparent;
+				border-bottom: 60px solid transparent;
+				cursor: pointer;
+				transition: border-color 0.3s ease;
+			}
+			
+			#right {
+				position: absolute;
+				right: 10%;
+				top: 50%;
+				width: 0;
+				height: 0;
+				margin-top: -30px;
+				border-left: 30px solid #aaa;
+				border-right: 30px solid transparent;
+				border-top: 60px solid transparent;
+				border-bottom: 60px solid transparent;
+				cursor: pointer;
+				transition: border-color 0.3s ease;
+			}
+			
+			#left:hover {
+				border-right-color: #333;
+			}
+			
+			#right:hover {
+				border-left-color: #333;
+			}
+		</style>
 	</head>
 	<body>
+		<div class="stage">
+			<div class="container" id="con">
+				<img src="1.jpg" alt="1">
+				<img src="2.jpg" alt="2">
+				<img src="3.jpg" alt="3">
+				<img src="4.jpg" alt="4">
+				<img src="5.jpg" alt="5">
+				<img src="6.jpg" alt="6">
+			</div>
+			<div id="left"></div>
+			<div id="right"></div>
+		</div>
+	<script type="text/javascript">
+		(function(){
+			var leftBtn = document.getElementById("left"),
+				rightBtn = document.getElementById("right"),
+				con = document.getElementById("con"),
+				degree = 0;
+		
+			leftBtn.onclick = function(){
+				degree-=60;
+				con.style.transform = "rotateY(" + degree + "deg)";
+			};
+		
+			rightBtn.onclick = function(){
+				degree+=60;
+				con.style.transform = "rotateY(" + degree + "deg)";
+			};
+		
+		})();
+	</script>
 	</body>
 </html>
